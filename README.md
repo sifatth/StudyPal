@@ -75,7 +75,11 @@ c:\xampp\htdocs\StudyPal
 
 1. Open phpMyAdmin: `http://localhost/phpmyadmin`
 2. Create a new database named: `studypal`
-3. Import the database schema (or create tables manually if a SQL file is provided)
+3. Import the database schema:
+   - Click on the `studypal` database
+   - Go to the **Import** tab
+   - Click **Choose File** and select `studypal.sql` from the project directory
+   - Click **Go** to import all tables and data
 
 ### 4. Database Configuration
 
@@ -90,9 +94,9 @@ $database = "studypal";
 
 Modify these credentials if your MySQL setup differs.
 
-### 5. Required Database Tables
+### 5. Database Tables
 
-Ensure your database has the following tables:
+The `studypal.sql` file includes the following tables:
 - `userprofile` - User information
 - `studygroup` - Study group details
 - `groupmembership` - User-group relationships
@@ -102,6 +106,8 @@ Ensure your database has the following tables:
 - `report` - User reports
 - `target` - Report targets (materials, questions, answers)
 - `searchlog` - Search query logs
+
+These tables are automatically created when you import the SQL file.
 
 ### 6. Create Uploads Directory
 
@@ -143,6 +149,7 @@ StudyPal/
 ├── admin_dashboard.php          # Admin moderation panel
 ├── create_group_process.php     # Group creation handler
 ├── db_connect.php               # Database connection
+├── studypal.sql                 # Database schema and structure
 ├── delete_*.php                 # Content deletion handlers
 ├── edit_profile.php             # Profile editing page
 ├── error_*.html                 # Error pages
